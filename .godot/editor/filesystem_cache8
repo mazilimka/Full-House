@@ -1,0 +1,27 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1730876089
+icon.svg::CompressedTexture2D::2345278323766952065::1730873020::1730873030::1::::<><>::
+::res://Assets/::1730873099
+::res://Assets/Simple Shapes/::1730873099
+Circle 2.png::CompressedTexture2D::7167131868240385142::1730873053::1730873099::1::::<><>::
+Circle.png::CompressedTexture2D::4590584519240183464::1730873053::1730873099::1::::<><>::
+Heart 2.png::CompressedTexture2D::8748199772079665175::1730873053::1730873099::1::::<><>::
+Heart.png::CompressedTexture2D::4356754143768211536::1730873053::1730873099::1::::<><>::
+Hexagon 2.png::CompressedTexture2D::3863326788785457169::1730873053::1730873099::1::::<><>::
+Hexagon.png::CompressedTexture2D::230503763496392842::1730873053::1730873099::1::::<><>::
+Pentagon 2.png::CompressedTexture2D::2739550979563391107::1730873053::1730873099::1::::<><>::
+Pentagon.png::CompressedTexture2D::783928237692399061::1730873053::1730873099::1::::<><>::
+Square2.png::CompressedTexture2D::7244301005992527973::1730873053::1730873099::1::::<><>::
+Square.png::CompressedTexture2D::2685619260614851767::1730873053::1730873099::1::::<><>::
+Srar.png::CompressedTexture2D::2542055837169712643::1730873053::1730873099::1::::<><>::
+Star 2.png::CompressedTexture2D::2333729401353428879::1730873053::1730873099::1::::<><>::
+Triangle 2.png::CompressedTexture2D::7143342840701390005::1730873053::1730873099::1::::<><>::
+Triangle.png::CompressedTexture2D::688664180088963406::1730873053::1730873099::1::::<><>::
+::res://ListOfTenants/::1730875471
+list_of_tenants.gd::GDScript::-1::1730875465::0::1::::<>Area2D<>::
+list_of_tenants.tscn::PackedScene::4478706527424483775::1730875471::0::1::::<><>::res://ListOfTenants/list_of_tenants.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png
+::res://Workplace/::1730876000
+workplace.tscn::PackedScene::2600501779119480744::1730876000::0::1::::<><>::uid://dbhgtxrop3kwb::::res://Assets/Simple Shapes/Square2.png<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>uid://b42rv3lo2yu1l::::res://ListOfTenants/list_of_tenants.tscn<>uid://djwml8pikvcc::::res://Assets/Simple Shapes/Hexagon.png<>uid://o3higsqkc6wp::::res://WorkplaceDoor/workplace_door.tscn
+::res://WorkplaceDoor/::1730875999
+workplace_door.gd::GDScript::-1::1730875845::0::1::::<>Area2D<>::
+workplace_door.tscn::PackedScene::1040886037033757223::1730875999::0::1::::<><>::res://WorkplaceDoor/workplace_door.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png

@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://bdbx5clbq2rue"]
+
+[ext_resource type="Texture2D" uid="uid://dbhgtxrop3kwb" path="res://Assets/Simple Shapes/Square2.png" id="1_217on"]
+[ext_resource type="Texture2D" uid="uid://bei60y6f24s44" path="res://Assets/Simple Shapes/Square.png" id="2_kh782"]
+[ext_resource type="PackedScene" uid="uid://b42rv3lo2yu1l" path="res://ListOfTenants/list_of_tenants.tscn" id="3_7u1vy"]
+[ext_resource type="Texture2D" uid="uid://djwml8pikvcc" path="res://Assets/Simple Shapes/Hexagon.png" id="4_rn6yg"]
+[ext_resource type="PackedScene" uid="uid://o3higsqkc6wp" path="res://WorkplaceDoor/workplace_door.tscn" id="5_vgrp0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kshe2"]
+size = Vector2(96, 78)
+
+[node name="Workplace" type="Node2D"]
+
+[node name="Table" type="Node2D" parent="."]
+
+[node name="Square2" type="Sprite2D" parent="Table"]
+modulate = Color(0.525101, 0.525101, 0.525101, 1)
+position = Vector2(686, 196.5)
+scale = Vector2(1.82031, 0.767578)
+texture = ExtResource("1_217on")
+
+[node name="Square" type="Sprite2D" parent="Table"]
+modulate = Color(0.917773, 0.763142, 0.79564, 1)
+position = Vector2(686, 520)
+scale = Vector2(1.82031, 0.496094)
+texture = ExtResource("2_kh782")
+
+[node name="ListOfTenants" parent="Table" instance=ExtResource("3_7u1vy")]
+position = Vector2(959, 504)
+
+[node name="Phone" type="Area2D" parent="Table"]
+position = Vector2(325, 491)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/Phone"]
+modulate = Color(1, 0.596078, 0, 1)
+scale = Vector2(0.216216, 0.216216)
+texture = ExtResource("4_rn6yg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table/Phone"]
+shape = SubResource("RectangleShape2D_kshe2")
+
+[node name="WorkplaceDoor" parent="." instance=ExtResource("5_vgrp0")]
+position = Vector2(93, 298)

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://o3higsqkc6wp"]
+
+[ext_resource type="Script" path="res://WorkplaceDoor/workplace_door.gd" id="1_66f58"]
+[ext_resource type="Texture2D" uid="uid://bei60y6f24s44" path="res://Assets/Simple Shapes/Square.png" id="1_fddkl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdwgs"]
+size = Vector2(185, 647)
+
+[node name="WorkplaceDoor" type="Area2D"]
+script = ExtResource("1_66f58")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.388235, 0.286275, 0.129412, 1)
+position = Vector2(3, 25)
+scale = Vector2(0.363281, 1.26172)
+texture = ExtResource("1_fddkl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1.5, 24.5)
+shape = SubResource("RectangleShape2D_vdwgs")
