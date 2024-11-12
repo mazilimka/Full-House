@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://v80e4ccecui0"]
+
+[ext_resource type="Script" path="res://Screens/Kitchen/DoorFromKtchToWs/door_from_ktch_to_wr.gd" id="1_axuhq"]
+[ext_resource type="Texture2D" uid="uid://bei60y6f24s44" path="res://Assets/Simple Shapes/Square.png" id="2_hbh57"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsuhn"]
+size = Vector2(282, 514)
+
+[node name="DoorFromKtchToWr" type="Area2D"]
+script = ExtResource("1_axuhq")
+
+[node name="Square" type="Sprite2D" parent="."]
+modulate = Color(0, 0.976563, 1, 1)
+scale = Vector2(0.552734, 1)
+texture = ExtResource("2_hbh57")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gsuhn")

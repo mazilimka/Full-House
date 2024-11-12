@@ -1,3 +1,7 @@
-res://WorkplaceDoor
+res://Screens/CameraBetweenSides
+res://Autoloads
+res://Screens/Kitchen
+res://Screens/WorkRoom
+res://Screens/StartScreen
+res://Autoloads/GlobalHUD
 res://ListOfTenants
-res://Workplace

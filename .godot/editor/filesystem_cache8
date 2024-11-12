@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1730876089
+::res://::1731437882
 icon.svg::CompressedTexture2D::2345278323766952065::1730873020::1730873030::1::::<><>::
 ::res://Assets/::1730873099
 ::res://Assets/Simple Shapes/::1730873099
@@ -17,11 +17,41 @@ Srar.png::CompressedTexture2D::2542055837169712643::1730873053::1730873099::1:::
 Star 2.png::CompressedTexture2D::2333729401353428879::1730873053::1730873099::1::::<><>::
 Triangle 2.png::CompressedTexture2D::7143342840701390005::1730873053::1730873099::1::::<><>::
 Triangle.png::CompressedTexture2D::688664180088963406::1730873053::1730873099::1::::<><>::
-::res://ListOfTenants/::1730875471
+::res://Autoloads/::1731437875
+Events.gd::GDScript::-1::1731436911::0::1::::<>Node<>::
+Global.gd::GDScript::-1::1731438143::0::1::::<>Node<>::
+::res://Autoloads/GlobalHUD/::1731438053
+GlobalHUD.gd::GDScript::-1::1731438287::0::1::::<>CanvasLayer<>::
+global_hud.tscn::PackedScene::5870955482944723661::1731438178::0::1::::<><>::res://Autoloads/GlobalHUD/GlobalHUD.gd<>uid://j2ug0nephw5s::::res://Assets/Simple Shapes/Triangle.png
+::res://ListOfTenants/::1731438053
 list_of_tenants.gd::GDScript::-1::1730875465::0::1::::<>Area2D<>::
-list_of_tenants.tscn::PackedScene::4478706527424483775::1730875471::0::1::::<><>::res://ListOfTenants/list_of_tenants.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png
-::res://Workplace/::1730876000
-workplace.tscn::PackedScene::2600501779119480744::1730876000::0::1::::<><>::uid://dbhgtxrop3kwb::::res://Assets/Simple Shapes/Square2.png<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>uid://b42rv3lo2yu1l::::res://ListOfTenants/list_of_tenants.tscn<>uid://djwml8pikvcc::::res://Assets/Simple Shapes/Hexagon.png<>uid://o3higsqkc6wp::::res://WorkplaceDoor/workplace_door.tscn
-::res://WorkplaceDoor/::1730875999
-workplace_door.gd::GDScript::-1::1730875845::0::1::::<>Area2D<>::
-workplace_door.tscn::PackedScene::1040886037033757223::1730875999::0::1::::<><>::res://WorkplaceDoor/workplace_door.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png
+list_of_tenants.tscn::PackedScene::4478706527424483775::1731438053::0::1::::<><>::res://ListOfTenants/list_of_tenants.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png
+::res://ScreenManager/::1731438053
+Rooms_Manager.gd::GDScript::-1::1731438026::0::1::::<>Control<>::
+rooms_manager.tscn::PackedScene::6824523620986086988::1731438053::0::1::::<><>::res://ScreenManager/Rooms_Manager.gd<>uid://bahrcklmepx6q::::res://Screens/StartScreen/start_screen.tscn
+::res://Screens/::1731435879
+::res://Screens/Kitchen/::1731438053
+kitchen.tscn::PackedScene::8138260000594745042::1731438053::0::1::::<><>::res://Screens/Kitchen/kitchen.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>uid://dbhgtxrop3kwb::::res://Assets/Simple Shapes/Square2.png<>uid://v80e4ccecui0::::res://Screens/Kitchen/DoorFromKtchToWs/door_from_ktch_to_wr.tscn
+kitchen.gd::GDScript::-1::1731437923::0::1::::<>Node2D<>::
+::res://Screens/Kitchen/DoorFromKtchToWs/::1731438053
+door_from_ktch_to_wr.gd::GDScript::-1::1731437255::0::1::::<>Area2D<>::
+door_from_ktch_to_wr.tscn::PackedScene::1543616776640515081::1731438053::0::1::::<><>::res://Screens/Kitchen/DoorFromKtchToWs/door_from_ktch_to_wr.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png
+::res://Screens/StartScreen/::1731438053
+start_screen.gd::GDScript::-1::1731437894::0::1::::<>Control<>::
+start_screen.tscn::PackedScene::2401907631213896834::1731438053::0::1::::<><>::res://Screens/StartScreen/start_screen.gd
+::res://Screens/WorkRoom/::1731438053
+work_room.gd::GDScript::-1::1731438287::0::1::::<>Node2D<>::
+work_room.tscn::PackedScene::2225087727417839276::1731438287::0::1::::<><>::res://Screens/WorkRoom/work_room.gd<>uid://bdbx5clbq2rue::::res://Screens/WorkRoom/Workspace/workspace.tscn<>uid://c7rire01uis4p::::res://Screens/WorkRoom/WorkspaceSideLeft/ws_side_left.tscn
+::res://Screens/WorkRoom/Workspace/::1731438053
+workspace.tscn::PackedScene::2600501779119480744::1731438053::0::1::::<><>::uid://dbhgtxrop3kwb::::res://Assets/Simple Shapes/Square2.png<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>uid://b42rv3lo2yu1l::::res://ListOfTenants/list_of_tenants.tscn<>uid://djwml8pikvcc::::res://Assets/Simple Shapes/Hexagon.png
+::res://Screens/WorkRoom/WorkspaceSideLeft/::1731438053
+ws_side_left.tscn::PackedScene::7054495129982664497::1731438053::0::1::::<><>::uid://o3higsqkc6wp::::res://Screens/WorkRoom/WorkspaceSideLeft/DoorToExitWp/door_to_exit_ws.tscn<>uid://bghxw16v42682::::res://Screens/WorkRoom/WorkspaceSideLeft/Bed/bed.tscn<>uid://bayk2cunc1lp0::::res://Screens/WorkRoom/WorkspaceSideLeft/DoorToKitchen/door_to_kitchen.tscn
+::res://Screens/WorkRoom/WorkspaceSideLeft/Bed/::1731438053
+bed.gd::GDScript::-1::1730917868::0::1::::<>Area2D<>::
+bed.tscn::PackedScene::2823441582589286657::1731438053::0::1::::<><>::uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>res://Screens/WorkRoom/WorkspaceSideLeft/Bed/bed.gd<>uid://b6nyiylffofhg::::res://Assets/Simple Shapes/Circle.png
+::res://Screens/WorkRoom/WorkspaceSideLeft/DoorToExitWp/::1731438053
+door_to_exit_ws.gd::GDScript::-1::1730875845::0::1::::<>Area2D<>::
+door_to_exit_ws.tscn::PackedScene::1040886037033757223::1731438053::0::1::::<><>::res://Screens/WorkRoom/WorkspaceSideLeft/DoorToExitWp/door_to_exit_ws.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png
+::res://Screens/WorkRoom/WorkspaceSideLeft/DoorToKitchen/::1731438053
+door_to_kitchen.gd::GDScript::-1::1731436983::0::1::::<>Area2D<>::
+door_to_kitchen.tscn::PackedScene::2436621272690789459::1731438053::0::1::::<><>::res://Screens/WorkRoom/WorkspaceSideLeft/DoorToKitchen/door_to_kitchen.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png

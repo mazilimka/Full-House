@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://rcn0icnk0jx7"]
+
+[ext_resource type="Script" path="res://Screens/CameraBetweenSides/camera_between_sides.gd" id="1_ctiax"]
+
+[node name="CameraBetweenSides" type="Camera2D"]
+position = Vector2(576, 324)
+script = ExtResource("1_ctiax")
