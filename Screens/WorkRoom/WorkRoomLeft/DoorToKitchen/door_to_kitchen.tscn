@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bayk2cunc1lp0"]
 
-[ext_resource type="Script" path="res://Screens/WorkRoom/WorkspaceSideLeft/DoorToKitchen/door_to_kitchen.gd" id="1_b7fvo"]
+[ext_resource type="Script" path="res://Screens/WorkRoom/WorkRoomLeft/DoorToKitchen/door_to_kitchen.gd" id="1_b7fvo"]
 [ext_resource type="Texture2D" uid="uid://bei60y6f24s44" path="res://Assets/Simple Shapes/Square.png" id="1_udt06"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3ypu"]

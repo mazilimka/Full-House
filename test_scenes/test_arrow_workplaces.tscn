@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvk4h4jbjic42"]
+
+[sub_resource type="GDScript" id="GDScript_0s7vj"]
+script/source = "extends Node2D
+
+var wr_front := load('res://Screens/WorkRoom/WorkRoomFront/wr_front.tscn')
+var wr_left := load('res://Screens/WorkRoom/WorkRoomLeft/wr_left.tscn')
+var wr_right := load('res://Screens/WorkRoom/WorkRoomRight/wr_right.tscn')
+var wr_back := load('res://Screens/WorkRoom/WorkRoomBack/wr_back.tscn')
+
+var sides: Array = [wr_back, wr_left, wr_front, wr_right]
+var current_side := 2
+var previous_side 
+
+func _ready() -> void:
+	choosed_scene_instance(sides[current_side])
+	Events.side_changed.connect(side_changing)
+
+
+func side_changing(side: String):
+	match side:
+		'left':
+			if current_side == 0:
+				current_side = 3
+				delete_prev_side()
+				choosed_scene_instance(sides[current_side])
+				return
+			
+			delete_prev_side()
+			choosed_scene_instance(sides[current_side - 1])
+			current_side -= 1
+		'right':
+			if current_side == 3:
+				current_side = 0
+				delete_prev_side()
+				choosed_scene_instance(sides[current_side])
+				return
+			
+			delete_prev_side()
+			choosed_scene_instance(sides[current_side + 1])
+			current_side += 1
+
+
+func choosed_scene_instance(what: PackedScene):
+	var scene_instance: Node2D = what.instantiate()
+	add_child(scene_instance, true)
+	previous_side = scene_instance
+	#Global.CurrentSide = side
+
+
+func delete_prev_side():
+	previous_side.queue_free()
+"
+
+[node name="TestArrowWorkplaces" type="Node2D"]
+script = SubResource("GDScript_0s7vj")

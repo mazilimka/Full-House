@@ -6,7 +6,6 @@ extends Node2D
 func _ready() -> void:
 	Global.CurrentRoom = self
 
-
 func side_move_left():
 	camera_between_sides.move_left()
 

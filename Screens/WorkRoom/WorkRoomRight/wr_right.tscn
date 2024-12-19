@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://p1edgrfab2pn"]
+
+[ext_resource type="Texture2D" uid="uid://dbhgtxrop3kwb" path="res://Assets/Simple Shapes/Square2.png" id="1_c3ssp"]
+
+[node name="WrRight" type="Node2D"]
+
+[node name="Square2" type="Sprite2D" parent="."]
+position = Vector2(280, 340)
+texture = ExtResource("1_c3ssp")
+
+[node name="Square3" type="Sprite2D" parent="."]
+position = Vector2(846, 343)
+texture = ExtResource("1_c3ssp")

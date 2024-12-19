@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kshe2"]
 size = Vector2(96, 78)
 
-[node name="Workplace" type="Node2D"]
+[node name="WrFront" type="Node2D"]
 
 [node name="Table" type="Node2D" parent="."]
 

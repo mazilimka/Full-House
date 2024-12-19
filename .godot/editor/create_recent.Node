@@ -1,11 +1,11 @@
+Node2D
+Label
 CollisionShape2D
 Area2D
 AnimationPlayer
 Camera2D
 ColorRect
-Label
 Sprite2D
 Control
 CanvasLayer
 TextureButton
-Node2D

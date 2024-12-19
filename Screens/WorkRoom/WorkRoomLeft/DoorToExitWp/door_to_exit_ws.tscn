@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://o3higsqkc6wp"]
 
-[ext_resource type="Script" path="res://Screens/WorkRoom/WorkspaceSideLeft/DoorToExitWp/door_to_exit_ws.gd" id="1_i2q4y"]
+[ext_resource type="Script" path="res://Screens/WorkRoom/WorkRoomLeft/DoorToExitWp/door_to_exit_ws.gd" id="1_i2q4y"]
 [ext_resource type="Texture2D" uid="uid://bei60y6f24s44" path="res://Assets/Simple Shapes/Square.png" id="2_ukxos"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdwgs"]

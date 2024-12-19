@@ -1,6 +1,7 @@
 extends Node
 
-var CurrentRoom 
+var CurrentRoom
+var CurrentSide: String
 
 
 func get_component(_node: Node, _comp_name: String):

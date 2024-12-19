@@ -6,8 +6,10 @@ func _ready() -> void:
 
 
 func left_side_pressed():
-	Global.CurrentRoom.side_move_left()
+	#Global.CurrentRoom.side_move_left()
+	Events.side_changed.emit('left')
 
 
 func right_side_pressed():
-	Global.CurrentRoom.side_move_right()
+	#Global.CurrentRoom.side_move_right()
+	Events.side_changed.emit('right')
