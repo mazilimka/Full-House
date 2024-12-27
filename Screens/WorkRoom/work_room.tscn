@@ -1,17 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://6x34tp458u5y"]
+[gd_scene load_steps=3 format=3 uid="uid://6x34tp458u5y"]
 
 [ext_resource type="Script" path="res://Screens/WorkRoom/work_room.gd" id="1_dca4x"]
-[ext_resource type="PackedScene" uid="uid://bdbx5clbq2rue" path="res://Screens/WorkRoom/WorkRoomFront/wr_front.tscn" id="1_m2jwv"]
-[ext_resource type="PackedScene" uid="uid://c7rire01uis4p" path="res://Screens/WorkRoom/WorkRoomLeft/wr_left.tscn" id="2_sbnf1"]
-[ext_resource type="PackedScene" uid="uid://rcn0icnk0jx7" path="res://Screens/CameraBetweenSides/camera_between_sides.tscn" id="4_id01q"]
+[ext_resource type="Script" path="res://components/SideManagerComponent.gd" id="2_u7wbo"]
 
 [node name="WorkRoom" type="Node2D"]
 script = ExtResource("1_dca4x")
 
-[node name="WrFront" parent="." instance=ExtResource("1_m2jwv")]
-
-[node name="WrLeft" parent="." instance=ExtResource("2_sbnf1")]
-position = Vector2(-1152, 0)
-
-[node name="CameraBetweenSides" parent="." instance=ExtResource("4_id01q")]
-unique_name_in_owner = true
+[node name="SideManagerComponent" type="Node" parent="."]
+script = ExtResource("2_u7wbo")

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1734606851
+::res://::1735284056
 icon.svg::CompressedTexture2D::2345278323766952065::1730873020::1730873030::1::::<><>::
 README.md::TextFile::-1::1731444994::0::1::::<><>::
 ::res://Assets/::1730873099
@@ -21,16 +21,16 @@ Triangle.png::CompressedTexture2D::688664180088963406::1730873053::1730873099::1
 ::res://Autoloads/::1734339170
 Events.gd::GDScript::-1::1734337924::0::1::::<>Node<>::
 Global.gd::GDScript::-1::1734339170::0::1::::<>Node<>::
-::res://Autoloads/GlobalHUD/::1734343112
+::res://Autoloads/GlobalHUD/::1735148403
 GlobalHUD.gd::GDScript::-1::1734338474::0::1::::<>CanvasLayer<>::
-global_hud.tscn::PackedScene::5870955482944723661::1734343112::0::1::::<><>::res://Autoloads/GlobalHUD/GlobalHUD.gd<>uid://j2ug0nephw5s::::res://Assets/Simple Shapes/Triangle.png
+global_hud.tscn::PackedScene::5870955482944723661::1735148403::0::1::::<><>::res://Autoloads/GlobalHUD/GlobalHUD.gd<>uid://j2ug0nephw5s::::res://Assets/Simple Shapes/Triangle.png
 ::res://components/::1731438691
 ::res://ListOfTenants/::1734337160
 list_of_tenants.gd::GDScript::-1::1730875465::0::1::::<>Area2D<>::
 list_of_tenants.tscn::PackedScene::4478706527424483775::1734337160::0::1::::<><>::res://ListOfTenants/list_of_tenants.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png
-::res://ScreenManager/::1734343111
+::res://ScreenManager/::1735148403
 Rooms_Manager.gd::GDScript::-1::1731438172::0::1::::<>Control<>::
-rooms_manager.tscn::PackedScene::6824523620986086988::1734343111::0::1::::<><>::res://ScreenManager/Rooms_Manager.gd<>uid://bahrcklmepx6q::::res://Screens/StartScreen/start_screen.tscn
+rooms_manager.tscn::PackedScene::6824523620986086988::1735148403::0::1::::<><>::res://ScreenManager/Rooms_Manager.gd<>uid://bahrcklmepx6q::::res://Screens/StartScreen/start_screen.tscn
 ::res://Screens/::1731439304
 ::res://Screens/CameraBetweenSides/::1734337159
 camera_between_sides.gd::GDScript::-1::1731441627::0::1::::<>Camera2D<>::
@@ -44,15 +44,15 @@ door_from_ktch_to_wr.tscn::PackedScene::1543616776640515081::1734337159::0::1:::
 ::res://Screens/StartScreen/::1731438172
 start_screen.gd::GDScript::-1::1731438172::0::1::::<>Control<>::
 start_screen.tscn::PackedScene::2401907631213896834::1731438053::0::1::::<><>::res://Screens/StartScreen/start_screen.gd
-::res://Screens/WorkRoom/::1734343111
+::res://Screens/WorkRoom/::1735148403
 work_room.gd::GDScript::-1::1734339170::0::1::::<>Node2D<>::
-work_room.tscn::PackedScene::2225087727417839276::1734343111::0::1::::<><>::res://Screens/WorkRoom/work_room.gd<>uid://bdbx5clbq2rue::::res://Screens/WorkRoom/WorkRoomFront/wr_front.tscn<>uid://c7rire01uis4p::::res://Screens/WorkRoom/WorkRoomLeft/wr_left.tscn<>uid://rcn0icnk0jx7::::res://Screens/CameraBetweenSides/camera_between_sides.tscn
-::res://Screens/WorkRoom/WorkRoomBack/::1734343112
-wr_back.tscn::PackedScene::7373191204936374122::1734343112::0::1::::<><>::uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>uid://bghxw16v42682::::res://Screens/WorkRoom/WorkRoomLeft/Bed/bed.tscn
-::res://Screens/WorkRoom/WorkRoomFront/::1734343112
-wr_front.tscn::PackedScene::2600501779119480744::1734343112::0::1::::<><>::uid://dbhgtxrop3kwb::::res://Assets/Simple Shapes/Square2.png<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>uid://b42rv3lo2yu1l::::res://ListOfTenants/list_of_tenants.tscn<>uid://djwml8pikvcc::::res://Assets/Simple Shapes/Hexagon.png
-::res://Screens/WorkRoom/WorkRoomLeft/::1734343112
-wr_left.tscn::PackedScene::7054495129982664497::1734343112::0::1::::<><>::uid://o3higsqkc6wp::::res://Screens/WorkRoom/WorkRoomLeft/DoorToExitWp/door_to_exit_ws.tscn<>uid://bghxw16v42682::::res://Screens/WorkRoom/WorkRoomLeft/Bed/bed.tscn<>uid://bayk2cunc1lp0::::res://Screens/WorkRoom/WorkRoomLeft/DoorToKitchen/door_to_kitchen.tscn
+work_room.tscn::PackedScene::2225087727417839276::1735148403::0::1::::<><>::res://Screens/WorkRoom/work_room.gd<>uid://bdbx5clbq2rue::::res://Screens/WorkRoom/WorkRoomFront/wr_front.tscn<>uid://c7rire01uis4p::::res://Screens/WorkRoom/WorkRoomLeft/wr_left.tscn<>uid://rcn0icnk0jx7::::res://Screens/CameraBetweenSides/camera_between_sides.tscn
+::res://Screens/WorkRoom/WorkRoomBack/::1735148403
+wr_back.tscn::PackedScene::7373191204936374122::1735148403::0::1::::<><>::uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>uid://bghxw16v42682::::res://Screens/WorkRoom/WorkRoomLeft/Bed/bed.tscn
+::res://Screens/WorkRoom/WorkRoomFront/::1735148403
+wr_front.tscn::PackedScene::2600501779119480744::1735148403::0::1::::<><>::uid://dbhgtxrop3kwb::::res://Assets/Simple Shapes/Square2.png<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>uid://b42rv3lo2yu1l::::res://ListOfTenants/list_of_tenants.tscn<>uid://djwml8pikvcc::::res://Assets/Simple Shapes/Hexagon.png
+::res://Screens/WorkRoom/WorkRoomLeft/::1735148403
+wr_left.tscn::PackedScene::7054495129982664497::1735148403::0::1::::<><>::uid://o3higsqkc6wp::::res://Screens/WorkRoom/WorkRoomLeft/DoorToExitWp/door_to_exit_ws.tscn<>uid://bghxw16v42682::::res://Screens/WorkRoom/WorkRoomLeft/Bed/bed.tscn<>uid://bayk2cunc1lp0::::res://Screens/WorkRoom/WorkRoomLeft/DoorToKitchen/door_to_kitchen.tscn
 ::res://Screens/WorkRoom/WorkRoomLeft/Bed/::1734339309
 bed.gd::GDScript::-1::1730917868::0::1::::<>Area2D<>::
 bed.tscn::PackedScene::2823441582589286657::1734339309::0::1::::<><>::uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png<>res://Screens/WorkRoom/WorkRoomLeft/Bed/bed.gd<>uid://b6nyiylffofhg::::res://Assets/Simple Shapes/Circle.png
@@ -62,7 +62,7 @@ door_to_exit_ws.tscn::PackedScene::1040886037033757223::1734339309::0::1::::<><>
 ::res://Screens/WorkRoom/WorkRoomLeft/DoorToKitchen/::1734339309
 door_to_kitchen.gd::GDScript::-1::1731443641::0::1::::<>Area2D<>::
 door_to_kitchen.tscn::PackedScene::2436621272690789459::1734339309::0::1::::<><>::res://Screens/WorkRoom/WorkRoomLeft/DoorToKitchen/door_to_kitchen.gd<>uid://bei60y6f24s44::::res://Assets/Simple Shapes/Square.png
-::res://Screens/WorkRoom/WorkRoomRight/::1734343112
-wr_right.tscn::PackedScene::1106755043157844575::1734343112::0::1::::<><>::uid://dbhgtxrop3kwb::::res://Assets/Simple Shapes/Square2.png
-::res://test_scenes/::1734343121
-test_arrow_workplaces.tscn::PackedScene::8655646375504316845::1734343121::0::1::::<><>::
+::res://Screens/WorkRoom/WorkRoomRight/::1735148403
+wr_right.tscn::PackedScene::1106755043157844575::1735148403::0::1::::<><>::uid://dbhgtxrop3kwb::::res://Assets/Simple Shapes/Square2.png
+::res://test_scenes/::1735148403
+test_arrow_workplaces.tscn::PackedScene::8655646375504316845::1735148403::0::1::::<><>::

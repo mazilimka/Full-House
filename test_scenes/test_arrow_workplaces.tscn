@@ -1,56 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://dvk4h4jbjic42"]
+[gd_scene load_steps=3 format=3 uid="uid://dvk4h4jbjic42"]
+
+[ext_resource type="Script" path="res://components/SideManagerComponent.gd" id="5_d5fch"]
 
 [sub_resource type="GDScript" id="GDScript_0s7vj"]
 script/source = "extends Node2D
 
-var wr_front := load('res://Screens/WorkRoom/WorkRoomFront/wr_front.tscn')
-var wr_left := load('res://Screens/WorkRoom/WorkRoomLeft/wr_left.tscn')
-var wr_right := load('res://Screens/WorkRoom/WorkRoomRight/wr_right.tscn')
-var wr_back := load('res://Screens/WorkRoom/WorkRoomBack/wr_back.tscn')
+@onready var side_manager_component: SideManagerComponent = %SideManagerComponent
 
-var sides: Array = [wr_back, wr_left, wr_front, wr_right]
-var current_side := 2
-var previous_side 
+var sides := {
+	-2: preload('res://Screens/WorkRoom/WorkRoomBack/wr_back.tscn'),
+	-1: preload('res://Screens/WorkRoom/WorkRoomLeft/wr_left.tscn'),
+	0: preload('res://Screens/WorkRoom/WorkRoomFront/wr_front.tscn'),
+	1: preload('res://Screens/WorkRoom/WorkRoomRight/wr_right.tscn'),
+	2: preload('res://Screens/WorkRoom/WorkRoomBack/wr_back.tscn')
+}
 
-func _ready() -> void:
-	choosed_scene_instance(sides[current_side])
-	Events.side_changed.connect(side_changing)
-
-
-func side_changing(side: String):
-	match side:
-		'left':
-			if current_side == 0:
-				current_side = 3
-				delete_prev_side()
-				choosed_scene_instance(sides[current_side])
-				return
-			
-			delete_prev_side()
-			choosed_scene_instance(sides[current_side - 1])
-			current_side -= 1
-		'right':
-			if current_side == 3:
-				current_side = 0
-				delete_prev_side()
-				choosed_scene_instance(sides[current_side])
-				return
-			
-			delete_prev_side()
-			choosed_scene_instance(sides[current_side + 1])
-			current_side += 1
+func _init() -> void:
+	add_screens()
 
 
-func choosed_scene_instance(what: PackedScene):
-	var scene_instance: Node2D = what.instantiate()
-	add_child(scene_instance, true)
-	previous_side = scene_instance
-	#Global.CurrentSide = side
-
-
-func delete_prev_side():
-	previous_side.queue_free()
+func add_screens():
+	var array_keys = sides.keys()
+	for id in array_keys:
+		var scene_instance = sides[id].instantiate()
+		add_child(scene_instance, true)
+		sides[id] = scene_instance
+		if scene_instance != get_node('WrFront'):
+			scene_instance.hide()
 "
 
 [node name="TestArrowWorkplaces" type="Node2D"]
 script = SubResource("GDScript_0s7vj")
+
+[node name="SideManagerComponent" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_d5fch")

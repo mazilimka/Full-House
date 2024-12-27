@@ -22,6 +22,11 @@ Events="*res://Autoloads/Events.gd"
 Global="*res://Autoloads/Global.gd"
 GlobalHud="*res://Autoloads/GlobalHUD/global_hud.tscn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+
 [input]
 
 left_mouse={
