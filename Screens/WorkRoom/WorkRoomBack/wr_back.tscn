@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddbvm8qsgri6e"]
 
 [ext_resource type="Texture2D" uid="uid://bei60y6f24s44" path="res://Assets/Simple Shapes/Square.png" id="1_blto6"]
-[ext_resource type="PackedScene" uid="uid://bghxw16v42682" path="res://Screens/WorkRoom/WorkRoomLeft/Bed/bed.tscn" id="2_5xty0"]
+[ext_resource type="PackedScene" uid="uid://bghxw16v42682" path="res://InputObjects/Bed/bed.tscn" id="2_5xty0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vdjty"]
 font_size = 46

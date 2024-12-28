@@ -14,14 +14,18 @@ func _ready() -> void:
 
 func arrows_manager():
 	if not array_keys.has(current_side - 1):
+		GlobalHud.is_left_blocked = true
 		GlobalHud.hide_arrows(-1)
 	else:
+		GlobalHud.is_left_blocked = false
 		GlobalHud.show_arrows(-1)
 	
 	if not array_keys.has(current_side + 1):
-		GlobalHud.hide_arrows(1)
+		GlobalHud.is_right_blocked = true
+		GlobalHud.hide_arrows(+1)
 	else:
-		GlobalHud.show_arrows(1)
+		GlobalHud.is_right_blocked = false
+		GlobalHud.show_arrows(+1)
 
 
 func changing_side(where: int):

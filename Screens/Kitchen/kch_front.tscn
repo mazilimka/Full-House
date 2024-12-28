@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://5jav6rfddnk3"]
+
+[ext_resource type="Texture2D" uid="uid://bei60y6f24s44" path="res://Assets/Simple Shapes/Square.png" id="1_e1ttj"]
+[ext_resource type="Script" path="res://Screens/Kitchen/kch_front.gd" id="1_wmqio"]
+[ext_resource type="Texture2D" uid="uid://dbhgtxrop3kwb" path="res://Assets/Simple Shapes/Square2.png" id="2_xglqh"]
+
+[sub_resource type="GDScript" id="GDScript_jssm4"]
+script/source = "extends Area2D
+
+
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsuhn"]
+size = Vector2(282, 514)
+
+[node name="KchFront" type="Node2D"]
+script = ExtResource("1_wmqio")
+
+[node name="Fridge" type="Sprite2D" parent="."]
+modulate = Color(0.570313, 0.570313, 0.570313, 1)
+position = Vector2(1001, 390)
+scale = Vector2(0.496094, 1)
+texture = ExtResource("1_e1ttj")
+
+[node name="Stove" type="Sprite2D" parent="."]
+modulate = Color(0.898438, 0.2948, 0.2948, 1)
+position = Vector2(588.5, 520.75)
+scale = Vector2(1.02148, 0.479492)
+texture = ExtResource("1_e1ttj")
+
+[node name="Stove2" type="Sprite2D" parent="."]
+modulate = Color(0.898438, 0.2948, 0.2948, 1)
+position = Vector2(590.5, 274)
+scale = Vector2(1.01172, 0.597656)
+texture = ExtResource("2_xglqh")
+
+[node name="DoorToWr" type="Area2D" parent="."]
+position = Vector2(159, 386)
+script = SubResource("GDScript_jssm4")
+
+[node name="Square" type="Sprite2D" parent="DoorToWr"]
+modulate = Color(0, 0.976563, 1, 1)
+scale = Vector2(0.552734, 1)
+texture = ExtResource("1_e1ttj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToWr"]
+shape = SubResource("RectangleShape2D_gsuhn")

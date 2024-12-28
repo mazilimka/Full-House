@@ -1,9 +1,9 @@
+res://InputObjects/ListOfTenants
+res://Screens/Kitchen
 res://Screens/WorkRoom/WorkRoomRight
 res://Screens/WorkRoom/WorkRoomBack
 res://Screens/CameraBetweenSides
 res://Autoloads
-res://Screens/Kitchen
 res://Screens/WorkRoom
 res://Screens/StartScreen
 res://Autoloads/GlobalHUD
-res://ListOfTenants

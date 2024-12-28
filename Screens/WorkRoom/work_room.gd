@@ -9,7 +9,10 @@ var sides := {
 	2: preload('res://Screens/WorkRoom/WorkRoomBack/wr_back.tscn')
 }
 
+
 func _init() -> void:
+	Global.CurrentRoom = self
+	Events.location_changed.emit(Events.STATES.Game)
 	add_screens()
 
 
@@ -19,5 +22,6 @@ func add_screens():
 		var scene_instance = sides[id].instantiate()
 		add_child(scene_instance, true)
 		sides[id] = scene_instance
-		if scene_instance != get_node('WrFront'):
-			scene_instance.hide()
+		if scene_instance == get_node('WrFront'):
+			scene_instance.show()
+		else: scene_instance.hide()
