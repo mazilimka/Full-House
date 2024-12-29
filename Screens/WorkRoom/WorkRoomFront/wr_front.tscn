@@ -24,7 +24,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(576, 805)]
+"values": [Vector2(576, 942)]
 }
 
 [sub_resource type="Animation" id="Animation_j50ub"]
@@ -39,7 +39,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(0.5, 0.5),
 "update": 0,
-"values": [Vector2(576, 324), Vector2(576, 805)]
+"values": [Vector2(576, 324), Vector2(576, 942)]
 }
 
 [sub_resource type="Animation" id="Animation_nir32"]
@@ -54,7 +54,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(2, 0.5),
 "update": 0,
-"values": [Vector2(576, 805), Vector2(576, 324)]
+"values": [Vector2(576, 942), Vector2(576, 324)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vkldb"]
@@ -109,7 +109,7 @@ texture = ExtResource("4_rn6yg")
 shape = SubResource("RectangleShape2D_kshe2")
 
 [node name="ListOfTenants" parent="." instance=ExtResource("6_o7ego")]
-position = Vector2(576, 805)
+position = Vector2(576, 942)
 
 [node name="Animations" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

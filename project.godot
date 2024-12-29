@@ -27,6 +27,31 @@ GlobalHud="*res://Autoloads/GlobalHUD/global_hud.tscn"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 
+[importer_defaults]
+
+font_data_dynamic={
+"Compress": null,
+"Fallbacks": null,
+"Rendering": null,
+"allow_system_fallback": false,
+"antialiasing": 0,
+"compress": false,
+"disable_embedded_bitmaps": false,
+"fallbacks": [],
+"force_autohinter": false,
+"generate_mipmaps": false,
+"hinting": 0,
+"language_support": {},
+"msdf_pixel_range": 100,
+"msdf_size": 100,
+"multichannel_signed_distance_field": true,
+"opentype_features": {},
+"oversampling": 0.0,
+"preload": [],
+"script_support": {},
+"subpixel_positioning": 1
+}
+
 [input]
 
 apply={

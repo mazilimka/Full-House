@@ -1,15 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://duas58q4r1o3w"]
+[gd_scene load_steps=10 format=3 uid="uid://duas58q4r1o3w"]
 
 [ext_resource type="Script" path="res://InputObjects/ListOfTenants/list_of_tenants.gd" id="1_86njr"]
 [ext_resource type="Texture2D" uid="uid://carkgxsye2ukf" path="res://Assets/image_of_tenants.png" id="1_fmjuk"]
 [ext_resource type="Texture2D" uid="uid://cu1hke0fu56d3" path="res://Assets/i.webp" id="2_dr15u"]
 [ext_resource type="Texture2D" uid="uid://du2prq78js7br" path="res://Assets/info_about_tenants.png" id="3_m7e04"]
-[ext_resource type="FontFile" uid="uid://bs0fldmmadsrh" path="res://Assets/PixelOperator8.ttf" id="4_3f15k"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_r8s33"]
-font = ExtResource("4_3f15k")
-font_size = 8
-font_color = Color(0, 0, 0, 1)
+[ext_resource type="LabelSettings" uid="uid://c6k1inpfmwh6" path="res://Themes/text_for_list_of_tenants.tres" id="5_y4m6n"]
 
 [sub_resource type="Animation" id="Animation_i46mu"]
 length = 0.001
@@ -124,13 +119,13 @@ _data = {
 }
 
 [node name="ListOfTenants" type="Node2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_86njr")
 
 [node name="ImageOfTenants" type="Sprite2D" parent="."]
 position = Vector2(-96, 0)
 scale = Vector2(6, 6)
 texture = ExtResource("1_fmjuk")
-metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="ImageOfTenants"]
 offset_left = -13.0
@@ -145,65 +140,67 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(99, 0)
 scale = Vector2(6, 6)
 texture = ExtResource("3_m7e04")
-metadata/_edit_group_ = true
 
 [node name="FullName" type="Label" parent="InfoAboutTenant"]
-offset_left = -14.0
-offset_top = -26.0
-offset_right = 7.0
-offset_bottom = -18.0
-text = "sad"
-label_settings = SubResource("LabelSettings_r8s33")
+offset_left = -15.5
+offset_top = -22.6667
+offset_right = 14.5
+offset_bottom = -17.6667
+theme_override_font_sizes/font_size = 8
+text = "Мак Мафович"
+label_settings = ExtResource("5_y4m6n")
 
 [node name="ApartamentNumber" type="Label" parent="InfoAboutTenant"]
-offset_left = -13.8333
-offset_top = -19.0
-offset_right = -6.83333
+offset_left = -12.0
+offset_top = -16.0
+offset_right = -9.0
 offset_bottom = -11.0
 text = "8"
-label_settings = SubResource("LabelSettings_r8s33")
+label_settings = ExtResource("5_y4m6n")
 
 [node name="FloorNumber" type="Label" parent="InfoAboutTenant"]
-offset_left = 7.0
-offset_top = -19.0
-offset_right = 14.0
+offset_left = 9.0
+offset_top = -16.0
+offset_right = 12.0
 offset_bottom = -11.0
 text = "4
 "
-label_settings = SubResource("LabelSettings_r8s33")
+label_settings = ExtResource("5_y4m6n")
 
 [node name="PassportSeries" type="Label" parent="InfoAboutTenant"]
-offset_left = -16.0
-offset_top = -12.1667
-offset_right = -2.0
-offset_bottom = -4.16667
+offset_left = -13.0
+offset_top = -9.0
+offset_right = -8.0
+offset_bottom = -4.0
 text = "82"
-label_settings = SubResource("LabelSettings_r8s33")
+label_settings = ExtResource("5_y4m6n")
 
 [node name="PassportNumber" type="Label" parent="InfoAboutTenant"]
-offset_left = -3.33333
-offset_top = -12.5
-offset_right = 10.6667
-offset_bottom = -4.5
-text = "735"
-label_settings = SubResource("LabelSettings_r8s33")
+offset_left = 1.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = -4.0
+text = "73742"
+label_settings = ExtResource("5_y4m6n")
 
 [node name="PassNumber" type="Label" parent="InfoAboutTenant"]
-offset_left = -9.0
-offset_top = -5.0
-offset_right = 5.0
+offset_left = -4.0
+offset_top = -2.0
 offset_bottom = 3.0
 text = "14"
-label_settings = SubResource("LabelSettings_r8s33")
+label_settings = ExtResource("5_y4m6n")
 
 [node name="Notes" type="Label" parent="InfoAboutTenant"]
-offset_left = -12.8333
-offset_top = 10.5
-offset_right = 14.1667
-offset_bottom = 18.5
-text = "Note
-"
-label_settings = SubResource("LabelSettings_r8s33")
+offset_left = -13.0833
+offset_top = 6.25
+offset_right = 13.9167
+offset_bottom = 23.25
+text = "Not
+eфралвыфо
+выаоыжаыа
+ываыв"
+label_settings = ExtResource("5_y4m6n")
+autowrap_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

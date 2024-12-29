@@ -23,7 +23,7 @@ func location_changing(location: Events.STATES):
 		Events.STATES.StartScreen:
 			hide_arrows("all")
 		Events.STATES.Game:
-			show_arrows("all")
+			Global.get_component(Global.CurrentRoom, 'SideManagerComponent').arrows_manager()
 			is_right_blocked = false
 			is_left_blocked = false
 		Events.STATES.ListOfTenants:

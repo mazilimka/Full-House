@@ -4,7 +4,7 @@ var sides := {
 	0: preload('res://Screens/Kitchen/kch_front.tscn')
 }
 
-func _init() -> void:
+func _ready() -> void:
 	Global.CurrentRoom = self
 	Events.location_changed.emit(Events.STATES.Game)
 	add_screens()

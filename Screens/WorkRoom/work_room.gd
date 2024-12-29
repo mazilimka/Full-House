@@ -10,10 +10,10 @@ var sides := {
 }
 
 
-func _init() -> void:
+func _ready() -> void:
+	add_screens()
 	Global.CurrentRoom = self
 	Events.location_changed.emit(Events.STATES.Game)
-	add_screens()
 
 
 func add_screens():
