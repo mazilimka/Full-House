@@ -1,10 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dn7h7n5m73lu5"]
+[gd_scene load_steps=2 format=3 uid="uid://dn7h7n5m73lu5"]
 
 [ext_resource type="Script" path="res://Screens/Kitchen/kitchen.gd" id="1_p8v4k"]
-[ext_resource type="Script" path="res://components/SideManagerComponent.gd" id="2_xl2ww"]
 
 [node name="Kitchen" type="Node2D"]
 script = ExtResource("1_p8v4k")
-
-[node name="SideManagerComponent" type="Node" parent="."]
-script = ExtResource("2_xl2ww")

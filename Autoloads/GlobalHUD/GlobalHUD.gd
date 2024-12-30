@@ -2,6 +2,8 @@ extends CanvasLayer
 
 var is_left_blocked := false
 var is_right_blocked := false
+var is_up_blocked := true
+var is_down_blocked := true
 
 
 func _ready() -> void:
@@ -23,10 +25,18 @@ func location_changing(location: Events.STATES):
 		Events.STATES.StartScreen:
 			hide_arrows("all")
 		Events.STATES.Game:
-			Global.get_component(Global.CurrentRoom, 'SideManagerComponent').arrows_manager()
+			var comp = Global.get_component(Global.CurrentRoom, 'SideManagerComponent')
+			if comp:
+				comp.arrows_manager()
+			else:
+				hide_arrows('all')
 			is_right_blocked = false
 			is_left_blocked = false
 		Events.STATES.ListOfTenants:
+			hide_arrows("all")
+			is_right_blocked = true
+			is_left_blocked = true
+		Events.STATES.Check:
 			hide_arrows("all")
 			is_right_blocked = true
 			is_left_blocked = true
@@ -44,7 +54,7 @@ func hide_arrows(what):
 	match what:
 		-1: %LeftSide.hide()
 		+1:  %RightSide.hide()
-		"all": 
+		"all":
 			%RightSide.hide()
 			%LeftSide.hide()
 
@@ -53,6 +63,3 @@ func show_arrows(what):
 	match what:
 		-1: %LeftSide.show()
 		+1: %RightSide.show()
-		"all": 
-			%RightSide.show()
-			%LeftSide.show()

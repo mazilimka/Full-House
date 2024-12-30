@@ -1,0 +1,110 @@
+[gd_scene load_steps=11 format=3 uid="uid://bxufavhekihpf"]
+
+[ext_resource type="Script" path="res://Screens/WorkRoom/WorkRoomFront/WrFront-Down/wr_front_down.gd" id="1_bn06v"]
+[ext_resource type="Texture2D" uid="uid://bei60y6f24s44" path="res://Assets/Simple Shapes/Square.png" id="1_wvvn3"]
+[ext_resource type="Texture2D" uid="uid://djwml8pikvcc" path="res://Assets/Simple Shapes/Hexagon.png" id="2_dif4x"]
+[ext_resource type="PackedScene" uid="uid://duas58q4r1o3w" path="res://InputObjects/ListOfTenants/list_of_tenants.tscn" id="3_j6q4j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ak5ca"]
+size = Vector2(144, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm0ed"]
+size = Vector2(96, 78)
+
+[sub_resource type="Animation" id="Animation_cta3h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ListOfTenants:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, 942)]
+}
+
+[sub_resource type="Animation" id="Animation_j50ub"]
+resource_name = "hidding_list_of_tenants"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ListOfTenants:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(576, 324), Vector2(576, 942)]
+}
+
+[sub_resource type="Animation" id="Animation_nir32"]
+resource_name = "showing_list_of_tenants"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ListOfTenants:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(576, 942), Vector2(576, 324)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vkldb"]
+_data = {
+"RESET": SubResource("Animation_cta3h"),
+"hidding_list_of_tenants": SubResource("Animation_j50ub"),
+"showing_list_of_tenants": SubResource("Animation_nir32")
+}
+
+[node name="WrFront-Down" type="Node2D"]
+script = ExtResource("1_bn06v")
+
+[node name="Square" type="Sprite2D" parent="."]
+modulate = Color(0.917773, 0.763142, 0.79564, 1)
+position = Vector2(576, 323.5)
+scale = Vector2(2.25, 1.26367)
+texture = ExtResource("1_wvvn3")
+
+[node name="ListOfTenantsArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(959, 521)
+rotation = 0.314159
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Area" type="Sprite2D" parent="ListOfTenantsArea"]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.28125, 0.375)
+texture = ExtResource("1_wvvn3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ListOfTenantsArea"]
+shape = SubResource("RectangleShape2D_ak5ca")
+
+[node name="Phone" type="Area2D" parent="."]
+position = Vector2(128, 521)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Phone"]
+modulate = Color(1, 0.596078, 0, 1)
+scale = Vector2(0.216216, 0.216216)
+texture = ExtResource("2_dif4x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Phone"]
+shape = SubResource("RectangleShape2D_jm0ed")
+
+[node name="ListOfTenants" parent="." instance=ExtResource("3_j6q4j")]
+position = Vector2(576, 942)
+
+[node name="Animations" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_vkldb")
+}
+speed_scale = 2.5
