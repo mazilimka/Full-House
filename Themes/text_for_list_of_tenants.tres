@@ -1,9 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c6k1inpfmwh6"]
 
-[ext_resource type="FontFile" uid="uid://bk7pwxxbqwyom" path="res://Assets/fonts/PixelifySans-VariableFont_wght.ttf" id="1_xxkay"]
+[ext_resource type="FontFile" uid="uid://bs0fldmmadsrh" path="res://Assets/fonts/PixelOperator8.ttf" id="1_78k3e"]
 
 [resource]
 line_spacing = 1.0
-font = ExtResource("1_xxkay")
+font = ExtResource("1_78k3e")
 font_size = 2
 font_color = Color(0, 0, 0, 1)

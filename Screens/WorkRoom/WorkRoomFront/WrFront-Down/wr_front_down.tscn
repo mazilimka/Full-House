@@ -100,6 +100,7 @@ texture = ExtResource("2_dif4x")
 shape = SubResource("RectangleShape2D_jm0ed")
 
 [node name="ListOfTenants" parent="." instance=ExtResource("3_j6q4j")]
+unique_name_in_owner = true
 position = Vector2(576, 942)
 
 [node name="Animations" type="AnimationPlayer" parent="."]

@@ -1,9 +1,22 @@
-[gd_scene load_steps=9 format=3 uid="uid://duas58q4r1o3w"]
+[gd_scene load_steps=15 format=3 uid="uid://duas58q4r1o3w"]
 
 [ext_resource type="Script" path="res://InputObjects/ListOfTenants/list_of_tenants.gd" id="1_86njr"]
 [ext_resource type="Texture2D" uid="uid://carkgxsye2ukf" path="res://Assets/image_of_tenants.png" id="1_fmjuk"]
 [ext_resource type="Texture2D" uid="uid://du2prq78js7br" path="res://Assets/info_about_tenants.png" id="3_m7e04"]
+[ext_resource type="Texture2D" uid="uid://cnytn1tantvvx" path="res://Assets/list.png" id="5_51rx6"]
 [ext_resource type="LabelSettings" uid="uid://c6k1inpfmwh6" path="res://Themes/text_for_list_of_tenants.tres" id="5_y4m6n"]
+[ext_resource type="FontFile" uid="uid://bk7pwxxbqwyom" path="res://Assets/fonts/PixelifySans-VariableFont_wght.ttf" id="6_pm28a"]
+[ext_resource type="FontFile" uid="uid://bs0fldmmadsrh" path="res://Assets/fonts/PixelOperator8.ttf" id="7_f1ltx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bl8qq"]
+font = ExtResource("6_pm28a")
+font_size = 3
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1muu8"]
+font = ExtResource("7_f1ltx")
+font_size = 2
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_i46mu"]
 length = 0.001
@@ -50,6 +63,30 @@ tracks/3/path = NodePath("InfoAboutTenant:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 6)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("List:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(99, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("List:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -110,11 +147,39 @@ tracks/1/keys = {
 "values": [Vector2(6, 6), Vector2(0, 6)]
 }
 
+[sub_resource type="Animation" id="Animation_y6vbn"]
+resource_name = "list_upheavel"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("List:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(99, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("List:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(6, 6), Vector2(0, 6)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kstyr"]
 _data = {
 "RESET": SubResource("Animation_i46mu"),
 "image_of_tenants_upheavel": SubResource("Animation_mroal"),
-"info_about_tenants_upheavel": SubResource("Animation_t37ro")
+"info_about_tenants_upheavel": SubResource("Animation_t37ro"),
+"list_upheavel": SubResource("Animation_y6vbn")
 }
 
 [node name="ListOfTenants" type="Node2D"]
@@ -125,6 +190,7 @@ script = ExtResource("1_86njr")
 position = Vector2(-96, 0)
 scale = Vector2(6, 6)
 texture = ExtResource("1_fmjuk")
+metadata/_edit_group_ = true
 
 [node name="TextureRect" type="TextureRect" parent="ImageOfTenants"]
 unique_name_in_owner = true
@@ -139,6 +205,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(99, 0)
 scale = Vector2(6, 6)
 texture = ExtResource("3_m7e04")
+metadata/_edit_group_ = true
 
 [node name="FullName" type="Label" parent="InfoAboutTenant"]
 unique_name_in_owner = true
@@ -215,7 +282,135 @@ eфралвыфо
 label_settings = ExtResource("5_y4m6n")
 autowrap_mode = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="List" type="Sprite2D" parent="."]
+position = Vector2(99, 0)
+scale = Vector2(6, 6)
+texture = ExtResource("5_51rx6")
+
+[node name="ListTitle" type="Label" parent="List"]
+unique_name_in_owner = true
+offset_left = -11.9167
+offset_top = -21.1667
+offset_right = 13.0833
+offset_bottom = -17.1667
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_bl8qq")
+
+[node name="Residents" type="Node2D" parent="List"]
+unique_name_in_owner = true
+
+[node name="Resident1" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.5
+offset_top = -15.0
+offset_right = 15.5
+offset_bottom = -12.0
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Resident2" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.5
+offset_top = -10.9167
+offset_right = 15.5
+offset_bottom = -7.91667
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Resident3" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.5
+offset_top = -6.91667
+offset_right = 15.5
+offset_bottom = -3.91667
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Resident4" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.5
+offset_top = -3.33333
+offset_right = 15.5
+offset_bottom = -0.333333
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Resident5" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.5
+offset_top = 0.666667
+offset_right = 15.5
+offset_bottom = 3.66667
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Resident6" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.5
+offset_top = 4.83333
+offset_right = 15.5
+offset_bottom = 7.83333
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Resident7" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.5
+offset_top = 8.91667
+offset_right = 15.5
+offset_bottom = 11.9167
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Resident8" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.5
+offset_top = 13.0833
+offset_right = 15.5
+offset_bottom = 16.0833
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Resident9" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.3333
+offset_top = 16.5833
+offset_right = 15.6667
+offset_bottom = 19.5833
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Resident10" type="Label" parent="List/Residents"]
+unique_name_in_owner = true
+offset_left = -14.25
+offset_top = 20.75
+offset_right = 15.75
+offset_bottom = 23.75
+focus_mode = 2
+mouse_filter = 0
+text = "Список Жильцов"
+label_settings = SubResource("LabelSettings_1muu8")
+
+[node name="Animations" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_kstyr")
 }

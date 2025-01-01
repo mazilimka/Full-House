@@ -1,6 +1,5 @@
 extends Node2D
 
-var SAVEFILE := "user://residents.json"
 
 var residents := {
 	1: {
@@ -56,20 +55,36 @@ var residents := {
 
 
 func _ready() -> void:
-	set_resident(residents[randi_range(1, 7)])
+	fill_in_list_of_tenants()
+	for node in %Residents.get_children():
+		node.gui_input.connect(_residents_list_gui_input.bind(node))
 
 
-func save_residents_to_file(path: String, residents: Array):
-	var file = FileAccess.open(path, FileAccess.WRITE)
-	if file:
-		file.store_line(JSON.stringify(residents, "\t"))
-		file.close()
+func _residents_list_gui_input(event: InputEvent, node):
+	if Input.is_action_just_pressed("apply"):
+		%Animations.play("list_upheavel")
+		var resident_name: String
+		resident_name = node.text
+		for res in residents.keys():
+			if resident_name == residents[res]['name']:
+				set_resident(residents[res])
+				return
+
+
+func fill_in_list_of_tenants():
+	var counter := 0
+	for res in residents.keys():
+		%Residents.get_child(counter).text = residents[res]["name"]
+		counter += 1
 
 
 func set_resident(res: Dictionary):
-	print(res)
 	%TextureRect.texture = load(res["photo_path"])
 	%FullName.text = res["name"]
 	%PassportSeries.text = res['passport_series']
 	%PassportNumber.text = res['passport_number']
 	%PassNumber.text = res["apartment_code"]
+
+
+func set_default_input_object():
+	%Animations.play("RESET")

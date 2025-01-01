@@ -4,12 +4,12 @@ class_name SideManagerComponent
 var array_keys: Array
 var current_side := 0
 var previous_side := 0
-var screen
+var room
 
 func _ready() -> void:
-	screen = get_parent()
+	room = get_parent()
 	Events.side_changed.connect(changing_side)
-	array_keys = screen.sides.keys()
+	array_keys = room.sides.keys()
 	arrows_manager()
 
 
@@ -34,7 +34,8 @@ func changing_side(where: int):
 	previous_side = current_side
 	current_side += where
 	arrows_manager()
-	screen.sides[current_side].set_process_input(true)
-	screen.sides[current_side].show()
-	screen.sides[previous_side].set_process_input(false)
-	screen.sides[previous_side].hide()
+	room.sides[current_side].set_process_input(true)
+	room.sides[current_side].show()
+	room.sides[previous_side].set_process_input(false)
+	room.sides[previous_side].hide()
+	Global.CurrentSide = room.sides[current_side]
