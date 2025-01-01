@@ -76,3 +76,18 @@ size_flags_vertical = 2
 texture_normal = ExtResource("1_pxfy3")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Back" type="Button" parent="."]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -93.0
+offset_top = -49.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 28
+text = "Back"

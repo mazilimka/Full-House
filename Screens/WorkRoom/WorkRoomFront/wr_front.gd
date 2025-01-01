@@ -6,17 +6,18 @@ var move_down_blocked := false
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("move_down") and not is_moving and not move_down_blocked:
+		Events.location_changed.emit(Events.STATES.Check)
 		move_down_blocked = true
 		move_up_blocked = false
 		
 		move_down()
-		Events.location_changed.emit(Events.STATES.Check)
 	
 	if Input.is_action_just_pressed("move_up") and not is_moving and not move_up_blocked:
+		Events.location_changed.emit(Events.STATES.Game)
+		$"WrFront-Down".set_default_input_object()
 		move_up_blocked = true
 		move_down_blocked = false
 		move_up()
-		Events.location_changed.emit(Events.STATES.Game)
 
 func move_down():
 	is_moving = true
@@ -36,3 +37,7 @@ func move_up():
 	tween.tween_property($"WrFront-Down", 'position', Vector2(prev_pos_x, prev_pos_y + 648), 0.2).set_ease(Tween.EASE_OUT)
 	await tween.finished
 	is_moving = false
+
+
+func set_default_input_object():
+	$"WrFront-Down".set_default_input_object()

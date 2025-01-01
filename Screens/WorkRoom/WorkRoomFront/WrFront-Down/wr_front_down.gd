@@ -9,21 +9,23 @@ func _ready() -> void:
 
 func _list_of_tern_input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_just_pressed("apply") and not is_showing:
-		show_list_of_ternants()
-		await %Animations.animation_finished
 		is_showing = true
-	
-	if Input.is_action_just_pressed("apply"):
-		hide_list_of_ternants()
-		await %Animations.animation_finished
-		is_showing = false
+		show_list_of_ternants()
 
 
 func show_list_of_ternants():
+	Events.location_changed.emit(Events.STATES.InputObject)
 	%Animations.play("showing_list_of_tenants")
-	Events.location_changed.emit(Events.STATES.ListOfTenants)
+	await %Animations.animation_finished
 
 
 func hide_list_of_ternants():
+	Events.location_changed.emit(Events.STATES.Check)
 	%Animations.play("hidding_list_of_tenants")
-	Events.location_changed.emit(Events.STATES.Game)
+	await %Animations.animation_finished
+	is_showing = false
+
+
+func set_default_input_object():
+	hide_list_of_ternants()
+	%ListOfTenants.set_default_input_object()

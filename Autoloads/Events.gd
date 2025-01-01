@@ -1,6 +1,6 @@
 extends Node
 
-enum STATES { Game, StartScreen, ListOfTenants, Check }
+enum STATES { Game, StartScreen, InputObject, Check }
 
 signal location_changed(location: STATES)
 signal room_changed(room: String)

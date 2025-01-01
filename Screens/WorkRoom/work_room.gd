@@ -24,4 +24,5 @@ func add_screens():
 		sides[id] = scene_instance
 		if scene_instance == get_node('WrFront'):
 			scene_instance.show()
+			Global.CurrentSide = get_node('WrFront')
 		else: scene_instance.hide()
