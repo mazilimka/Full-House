@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7rire01uis4p"]
+[gd_scene load_steps=8 format=3 uid="uid://c7rire01uis4p"]
 
 [ext_resource type="Script" path="res://Screens/WorkRoom/WorkRoomLeft/wr_left.gd" id="1_bh6jt"]
 [ext_resource type="Texture2D" uid="uid://bei60y6f24s44" path="res://Assets/Simple Shapes/Square.png" id="2_o2q0a"]
 [ext_resource type="Texture2D" uid="uid://b6nyiylffofhg" path="res://Assets/Simple Shapes/Circle.png" id="3_4y31y"]
+[ext_resource type="Script" path="res://InputObjects/door.gd" id="3_8ggr6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdwgs"]
 size = Vector2(242, 647)
@@ -36,6 +37,8 @@ texture = ExtResource("2_o2q0a")
 
 [node name="DoorToKitchen" type="Area2D" parent="."]
 position = Vector2(737, 300)
+script = ExtResource("3_8ggr6")
+room_name = "Kitchen"
 
 [node name="Sprite2D2" type="Sprite2D" parent="DoorToKitchen"]
 modulate = Color(0.0643005, 0.335938, 0.0812778, 1)

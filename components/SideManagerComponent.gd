@@ -1,7 +1,7 @@
 extends Node
 class_name SideManagerComponent
 
-var array_keys: Array
+var room_sides_idx_array: Array
 var current_side := 0
 var previous_side := 0
 var room
@@ -9,12 +9,12 @@ var room
 func _ready() -> void:
 	room = get_parent()
 	Events.side_changed.connect(changing_side)
-	array_keys = room.sides.keys()
+	room_sides_idx_array = room.sides.keys()
 	arrows_manager()
 
 
 func arrows_manager():
-	if not array_keys.has(current_side - 1):
+	if not room_sides_idx_array.has(current_side - 1):
 		GlobalHud.is_left_blocked = true
 		GlobalHud.hide_arrows(-1)
 		
@@ -22,7 +22,7 @@ func arrows_manager():
 		GlobalHud.is_left_blocked = false
 		GlobalHud.show_arrows(-1)
 	
-	if not array_keys.has(current_side + 1):
+	if not room_sides_idx_array.has(current_side + 1):
 		GlobalHud.is_right_blocked = true
 		GlobalHud.hide_arrows(+1)
 	else:
@@ -33,6 +33,7 @@ func arrows_manager():
 func changing_side(where: int):
 	previous_side = current_side
 	current_side += where
+	
 	arrows_manager()
 	room.sides[current_side].set_process_input(true)
 	room.sides[current_side].show()
