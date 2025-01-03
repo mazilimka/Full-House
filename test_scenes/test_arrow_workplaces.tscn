@@ -1,37 +1,64 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvk4h4jbjic42"]
+[gd_scene load_steps=4 format=3 uid="uid://dvk4h4jbjic42"]
 
-[ext_resource type="Script" path="res://components/SideManagerComponent.gd" id="5_d5fch"]
-
-[sub_resource type="GDScript" id="GDScript_0s7vj"]
-script/source = "extends Node2D
-
-@onready var side_manager_component: SideManagerComponent = %SideManagerComponent
-
-var sides := {
-	-2: preload('res://Screens/WorkRoom/WorkRoomBack/wr_back.tscn'),
-	-1: preload('res://Screens/WorkRoom/WorkRoomLeft/wr_left.tscn'),
-	0: preload('res://Screens/WorkRoom/WorkRoomFront/wr_front.tscn'),
-	1: preload('res://Screens/WorkRoom/WorkRoomRight/wr_right.tscn'),
-	2: preload('res://Screens/WorkRoom/WorkRoomBack/wr_back.tscn')
-}
-
-func _init() -> void:
-	add_screens()
-
-
-func add_screens():
-	var array_keys = sides.keys()
-	for id in array_keys:
-		var scene_instance = sides[id].instantiate()
-		add_child(scene_instance, true)
-		sides[id] = scene_instance
-		if scene_instance != get_node('WrFront'):
-			scene_instance.hide()
-"
+[ext_resource type="Script" path="res://Screens/screen.gd" id="2_7ruwd"]
+[ext_resource type="Script" path="res://test_scenes/manager.gd" id="3_hcipy"]
+[ext_resource type="Texture2D" uid="uid://b4d7w6r6nlauf" path="res://exercise1.png" id="3_m1ypj"]
 
 [node name="TestArrowWorkplaces" type="Node2D"]
-script = SubResource("GDScript_0s7vj")
 
-[node name="SideManagerComponent" type="Node" parent="."]
+[node name="Exercise1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.317647)
+position = Vector2(517, 337)
+scale = Vector2(3.75221, 3.75221)
+texture = ExtResource("3_m1ypj")
+
+[node name="Rect" type="Sprite2D" parent="." node_paths=PackedStringArray("to_up")]
 unique_name_in_owner = true
-script = ExtResource("5_d5fch")
+position = Vector2(562, 579)
+scale = Vector2(0.179688, 0.0625)
+script = ExtResource("2_7ruwd")
+to_up = NodePath("../Rect2")
+
+[node name="Rect2" type="Sprite2D" parent="." node_paths=PackedStringArray("to_right", "to_up")]
+unique_name_in_owner = true
+position = Vector2(560, 436)
+scale = Vector2(0.179688, 0.0625)
+script = ExtResource("2_7ruwd")
+to_right = NodePath("../Rect3")
+to_up = NodePath("../Rect4")
+
+[node name="Rect3" type="Sprite2D" parent="." node_paths=PackedStringArray("to_left")]
+unique_name_in_owner = true
+position = Vector2(771, 428)
+scale = Vector2(0.179688, 0.0625)
+script = ExtResource("2_7ruwd")
+to_left = NodePath("../Rect2")
+
+[node name="Rect4" type="Sprite2D" parent="." node_paths=PackedStringArray("to_up")]
+unique_name_in_owner = true
+position = Vector2(555, 290)
+scale = Vector2(0.179688, 0.0625)
+script = ExtResource("2_7ruwd")
+to_up = NodePath("../Rect5")
+
+[node name="Rect5" type="Sprite2D" parent="." node_paths=PackedStringArray("to_right")]
+unique_name_in_owner = true
+position = Vector2(555, 155)
+scale = Vector2(0.179688, 0.0625)
+script = ExtResource("2_7ruwd")
+to_right = NodePath("../Rect6")
+
+[node name="Rect6" type="Sprite2D" parent="." node_paths=PackedStringArray("to_left")]
+unique_name_in_owner = true
+position = Vector2(769, 149)
+scale = Vector2(0.179688, 0.0625)
+script = ExtResource("2_7ruwd")
+to_left = NodePath("../Rect5")
+
+[node name="Manager" type="Node" parent="."]
+script = ExtResource("3_hcipy")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 50

@@ -1,7 +1,8 @@
-Button
-Node2D
 Label
+Node2D
+Node
 Sprite2D
+Button
 Camera2D
 ColorRect
 AnimationPlayer
@@ -11,5 +12,3 @@ PanelContainer
 Control
 VBoxContainer
 MarginContainer
-SideManagerComponent
-CollisionShape2D

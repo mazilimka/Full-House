@@ -1,8 +1,11 @@
-res://ScreenManager/rooms_manager.tscn
+res://test_scenes/test_arrow_workplaces.tscn
 res://Themes/text_for_list_of_tenants.tres
+res://Screens/screen.gd
+res://ScreenManager/rooms_manager.tscn
 res://Screens/WorkRoom/work_room.tscn
 res://Screens/WorkRoom/WorkRoomFront/wr_front.tscn
 res://Screens/WorkRoom/WorkRoomFront/WrFront-Down/wr_front_down.tscn
 res://Autoloads/GlobalHUD/global_hud.tscn
 res://InputObjects/ListOfTenants/list_of_tenants_area.tscn
 res://InputObjects/ListOfTenants/list_of_tenants.tscn
+res://test_scenes/manager.gd
